@@ -117,10 +117,7 @@ const handleForm = (e) => {
       redirect: "follow",
     };
 
-    fetch(
-      "https://trip-advisor-backend-production.up.railway.app/generate",
-      requestOptions
-    )
+    fetch("https://go-trip-api.onrender.com/generate", requestOptions)
       .then(async (response) => await response.text())
       .then((result) => {
         var formattedResponse = result.replace(/\"/g, "").replace(/\*/g, "");
